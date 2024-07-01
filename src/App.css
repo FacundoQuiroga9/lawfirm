@@ -1,0 +1,31 @@
+body, html {
+  background: rgb(4,16,41);
+  background: linear-gradient(270deg, rgba(4,16,41,1) 0%, rgba(0,45,139,1) 100%);
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero,
+#services,
+#about,
+#contact {
+  width: 100%;
+  min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+  background-color: inherit; /* Hereda el color de fondo del body */
+}
+
+#services{
+  background-color: white;
+  padding: 100px 0; /* Ajusta el padding según tus necesidades */
+  color: #022C89;
+}
+
+#contact{
+  background-image: url(/images/office.jpg);
+  background-size: cover; /* Hace que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}

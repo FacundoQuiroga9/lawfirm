@@ -1,0 +1,26 @@
+.services-title{
+  font-size: 4rem !important;
+  color: #022C89 !important;
+}
+
+
+
+.services-text{
+  font-size: 2rem !important;
+}
+
+.middle{
+  border-left: .4rem solid #022C89;
+  border-right: .4rem solid #022C89;
+}
+
+.icon-png{
+  width: 2.5rem !important;
+  display: inline;
+  margin-right: 1rem;
+}
+
+.legal-title{
+  display: inline !important;
+  margin-bottom: 4rem !important;
+}

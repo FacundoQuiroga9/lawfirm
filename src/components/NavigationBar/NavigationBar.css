@@ -1,0 +1,19 @@
+/* NavigationBar.css */
+.custom-navbar {
+  color: #041029 !important;
+  position: sticky;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  font-size: 1.5rem; /* Ajusta el tamaño de fuente según tus necesidades */
+}
+
+.flag-icon{
+  width: 4rem;
+  box-shadow: 1px 1px 1px .5px black;
+}
+
+.logotipo{
+  width: 10rem
+}

@@ -1,0 +1,21 @@
+.hero-title{
+  font-size: 6rem;
+}
+
+.hero-text{
+  font-size: 1.5rem;
+}
+
+.btn-law{
+  background-color: transparent !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: 4px solid white !important;
+  font-size: 1.3rem !important;
+}
+
+.btn-law:hover{
+  background-color: rgb(255, 255, 255) !important;
+  color: #022C89 !important;
+  cursor: hover;
+}
