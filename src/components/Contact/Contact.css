@@ -1,11 +1,13 @@
 #contact{
   color: #022C89;
+  scroll-margin-top: 100px;
 }
 
 #contact h2 {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 20px;
+  font-family: "Archivo Black", sans-serif;
 }
 
 

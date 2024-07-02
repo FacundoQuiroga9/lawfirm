@@ -1,26 +1,32 @@
+#services{
+  scroll-margin-top: 100px;
+}
+
 .services-title{
   font-size: 4rem !important;
   color: #022C89 !important;
+  font-family: "Archivo Black", sans-serif;
 }
-
-
 
 .services-text{
   font-size: 2rem !important;
 }
 
-.middle{
-  border-left: .4rem solid #022C89;
-  border-right: .4rem solid #022C89;
+.list{
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding-left: 20px;
+  color: #022C89;
 }
 
 .icon-png{
-  width: 2.5rem !important;
-  display: inline;
-  margin-right: 1rem;
+  height: 2.5rem !important;
+  width: auto !important;
+  display: inline !important;
+
 }
 
 .legal-title{
   display: inline !important;
-  margin-bottom: 4rem !important;
+  margin: 0 !important;
 }
