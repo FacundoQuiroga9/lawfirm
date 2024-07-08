@@ -8,8 +8,7 @@
 }
 
 .hero-text{
-  font-size: 1.5rem;
-
+  font-size: 2rem;
 }
 
 .btn-law{
@@ -25,4 +24,24 @@
   background-color: rgb(255, 255, 255) !important;
   color: #022C89 !important;
   cursor: hover;
+}
+
+@media (max-width: 992px) {
+  .hero-title{
+    font-size: 4rem;
+  }
+  .hero{
+    display: flex;
+  }
+
+  .hero-text{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title{
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
 }

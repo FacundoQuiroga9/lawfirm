@@ -9,11 +9,11 @@ const ServicesSection = () => {
     <section id="services" className="services-section py-5">
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
         <h2 className="text-center services-title">Legal Practice Areas</h2>
-        <p className="text-center services-text mb-5">Expert Legal Solutions for Every Aspect of Your Life</p>
+        <p className="text-center services-text">Expert Legal Solutions for Every Aspect of Your Life</p>
         <Row className="mt-5 w-100 justify-content-center">
-          <Col md={4} className="service-item px-5">
+          <Col lg={4} className="service-item">
           <Row className="d-flex flex-direction-row">
-            <Col className="d-flex justify-content-center align-items-center">
+            <Col className="d-flex align-items-center">
             <img src={handcuffs} alt="" className="icon-png me-2" />
             <h3 className="legal-title">Criminal Law</h3>
             </Col>
@@ -26,9 +26,9 @@ const ServicesSection = () => {
               <li>Protection of rights at every stage of the legal process.</li>
             </ul>
           </Col>
-          <Col md={4} className="service-item middle px-5">
+          <Col lg={4} className="service-item middle">
           <Row className="d-flex flex-direction-row">
-            <Col className="d-flex justify-content-center align-items-center">
+            <Col className="d-flex align-items-center">
             <img src={civil} alt="" className="icon-png me-2" />
             <h3 className="legal-title">Civil Law</h3>
             </Col>
@@ -41,9 +41,9 @@ const ServicesSection = () => {
               <li>Efficient resolution of civil disputes.</li>
             </ul>
           </Col>
-          <Col md={4} className="service-item px-5">
+          <Col lg={4} className="service-item">
           <Row className="d-flex flex-direction-row">
-            <Col className="d-flex justify-content-center align-items-center">
+            <Col className="d-flex align-items-center">
             <img src={family} alt="" className="icon-png me-2" />
             <h3 className="legal-title">Family Law</h3>
             </Col>

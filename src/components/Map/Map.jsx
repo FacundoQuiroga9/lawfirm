@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const Map = () => {
-  const position = [33.02979785440171, -96.70612097483566]; // Cambia esto a la latitud y longitud de tu oficina
+  const position = [33.02979785440171, -96.70612097483566]; 
 
   return (
     <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>

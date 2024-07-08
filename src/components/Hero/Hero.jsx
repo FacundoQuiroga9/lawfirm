@@ -3,8 +3,8 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <div id='home' className="hero text-light">
-      <Container>
+    <div id='home' className="text-light">
+      <Container className='hero'>
         <Row className="align-items-center">
           <Col md={6} className="text-md-start text-center">
             <h1 className='hero-title'>Your Legal Shield in Texas</h1>
