@@ -14,7 +14,7 @@
 }
 
 .list{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   padding-left: 20px;
   color: #022C89;
@@ -29,6 +29,7 @@
 .legal-title{
   display: inline !important;
   margin: 0 !important;
+  font-size: 2rem;
 }
 .service-item{
   padding: 0 3rem !important;
@@ -44,13 +45,13 @@
     margin-bottom: 2rem;
   }
   .legal-title{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .icon-png{
     height: 2rem !important;
   }
   .list{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
   }
   .service-item{
