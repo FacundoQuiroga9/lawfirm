@@ -1,13 +1,13 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './About.css';
-import lawyer from '/images/Abogado2.png';
+import lawyer from '/images/mark1.png';
 
 const AboutSection = () => {
   return (
-    <Container className='py-5'>
+    <Container className='pt-5'>
        <Row id="about" className="about-section d-flex align-items-center justify-content-center">
       <Col lg={6} className="about-image me-5">
-        <img src={lawyer} className='about-img ' alt="Profile" />
+        <img src={lawyer} className='about-img' alt="Profile" />
       </Col>
       <Col className="about-content">
         <h2>About Me</h2>

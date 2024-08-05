@@ -25,7 +25,15 @@
   color: #022C89 !important;
   cursor: hover;
 }
-
+.hero{
+  position: relative;
+}
+.hero-img{
+  padding: 4rem 0 0 0 !important;
+  position: absolute;
+  bottom: 0;
+  width: 45rem;
+}
 @media (max-width: 992px) {
   .hero-title{
     font-size: 4rem;
@@ -37,11 +45,31 @@
   .hero-text{
     font-size: 1.5rem;
   }
+
+  .hero-img{
+    position:absolute;
+    left: 200px;
+    width: 55rem;
+  }
+  .hero-call{
+    z-index: 3;
+  }
+
+  .hero-text{
+    text-shadow: 5px 5px 8px black;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-title{
     margin-top: 3rem;
     font-size: 3rem;
+  }
+  .hero-img{
+    position:unset;
+  }
+
+  .hero-text{
+    text-shadow: none;
   }
 }

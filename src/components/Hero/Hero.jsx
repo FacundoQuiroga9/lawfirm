@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <div id='home' className="text-light">
       <Container className='hero'>
-        <Row className="align-items-center">
-          <Col md={6} className="text-md-start text-center">
+        <Row className="align-items-center hero">
+          <Col md={6} className="text-md-start text-center hero-call">
             <h1 className='hero-title'>Your Legal Shield in Texas</h1>
             <p className='hero-text'>Tailored legal solutions for your unique case.</p>
             <div>
@@ -14,7 +14,7 @@ const Hero = () => {
             </div>
           </Col>
           <Col md={6} className="text-center">
-            <img src="/images/abogado.png" alt="Lawyer" className="img-fluid" />
+            <img src="/images/mark2.png" alt="Lawyer" className="img-fluid hero-img" />
           </Col>
         </Row>
       </Container>

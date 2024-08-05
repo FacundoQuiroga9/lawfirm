@@ -2,3 +2,9 @@
   background-color: white !important;
   color: #022C89;
 }
+
+.fq-link{
+  font-weight: bold;
+  text-decoration: none;
+  color:#022C89;
+}
