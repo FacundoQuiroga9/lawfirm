@@ -15,7 +15,7 @@ const NavigationBar = () => {
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link className='number-button' href="tel:+12144713434">(214) 471-3434</Nav.Link>
+            <Nav.Link className='number-button' href="tel:+12144713434">(469) 782-0166</Nav.Link>
               <img src={TexasFlag} alt="Texas Flag" className="flag-icon" />
           </Nav>
         </Navbar.Collapse>
