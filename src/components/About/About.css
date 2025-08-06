@@ -1,71 +1,94 @@
-#about{
+#about {
   scroll-margin-top: 100px;
   color: white;
 }
 
-#about h2{
-  font-size: 4rem;
+/* Estilos base para pantallas pequeñas (mobile) */
+#about h2 {
+  font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
   font-family: "Archivo Black", sans-serif;
 }
 
-.about-section{
-  position: relative;
+.about-content {
+  width: 100%; /* Para pantallas pequeñas, ocupamos el 100% del ancho */
 }
 
-.about-img{
-  position: absolute;
-  bottom: 0;
-  right: 600px;
-  width: 60rem;
-}
-
-.about-content{
-  width: 50%;
-}
-
-#about h3{
-  font-size: 2rem;
+#about h3 {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-#about p{
-  font-size: 1.3rem;
-}
-@media (max-width: 1600px){
-  .about-img{
-    width: 50rem;
-  }
+#about p {
+  font-size: 1rem;
+  padding: 0 1rem;
 }
 
-@media (max-width: 992px) {
-  #about h2{
-    font-size: 3rem;
-    padding: 0 2rem;
-  }
-  .about-image{
-    width: 80% !important;
-  }
-  #about p{
-    font-size: 1.2rem;
-    padding: 0 2rem;
-  }
-  .about-img{
-    position: unset;
-    border-bottom: 1rem solid white;
-  }
-
+.about-section {
+  position: relative;
 }
 
-@media (max-width: 576px) {
-  #about h2{
-    font-size: 2.3rem;
-    margin-top: 1.5rem;
+.about-img {
+  width: 80%; /* La imagen se adapta al 80% del ancho en pantallas pequeñas */
+  position: unset; /* Eliminamos el absolute para pantallas pequeñas */
+  border-bottom: 1rem solid white;
+  margin: 0 auto;
+}
+
+/* Estilos para pantallas medianas (tablets y más grandes) */
+@media (min-width: 576px) {
+  .about-img {
+    width: 70% !important; /* Ajustamos la imagen al 60% del ancho en pantallas medianas */
+  }
+
+  #about > h2 {
+    font-size: 1.5rem !important;
     padding: 0 1rem;
   }
-  #about p{
-    font-size: 1rem;
-    padding: 0 1rem;
+
+  #about > p {
+    font-size: .8rem !important;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Estilos para pantallas grandes (laptops) */
+@media (min-width: 992px) {
+  .about-img {
+    width: 45rem; /* Ajustamos el tamaño de la imagen */
+    position: absolute;
+    bottom: 0;
+    border: none;
+  }
+
+  .about-content {
+    width: 60%; /* Para pantallas grandes, la sección de contenido ocupa el 50% */
+  }
+
+  #about h2 {
+    font-size: 4rem !important;
+  }
+
+  #about p {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Estilos para pantallas extra grandes */
+@media (min-width: 1600px) {
+  #about h2 {
+    font-size: 4rem;
+  }
+
+  #about p {
+    font-size: 1.3rem;
+  }
+
+  .about-img {
+    width: 60rem;
+    right: 600px;
   }
 }

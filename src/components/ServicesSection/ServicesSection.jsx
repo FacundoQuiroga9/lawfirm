@@ -45,7 +45,6 @@ const ServicesSection = () => {
               <li>Restraining Orders</li>
               <li>Adoption</li>
               <li>Wills, Trusts, Probate</li>
-              <li>Restraining Orders</li>
             </ul>
           </Col>
           <Col md={4} lg={4} className="service-item middle">

@@ -13,7 +13,7 @@ const Contact = () => {
             <p>101 E Park Blvd Suite 355, Plano, TX 75074</p>
             <h5><strong>Contact</strong></h5>
             <p>contact@marcjfratter.com</p>
-            <p>(214) 471-3434</p>
+            <p>(469) 782-0166</p>
             <h5><strong>Open Hours</strong></h5>
             <p>Monday-Saturday: 8 am – 6 pm</p>
             <p>Sunday: 11 am – 4 pm</p>

@@ -9,7 +9,7 @@ const AboutSection = () => {
       <Col lg={6} className="about-image me-5">
         <img src={lawyer} className='about-img' alt="Profile" />
       </Col>
-      <Col className="about-content">
+      <Col className="about-content py-5">
         <h2>About Me</h2>
         <p>
           Marc J. Fratter is one of Texas's preeminent criminal defense lawyers, renowed for his relentless dedication to his clients. Marc is a graduate of the Texas A&M School of Law and has been practicing civil law, criminal defense, and family law in the state of Texas for over 20 years.
