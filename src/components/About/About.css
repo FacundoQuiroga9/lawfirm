@@ -66,6 +66,9 @@
 
   .about-content {
     width: 60%; /* Para pantallas grandes, la sección de contenido ocupa el 50% */
+    background-color: var(--white);
+    color: var(--blue);
+    z-index: 2;
   }
 
   #about h2 {
