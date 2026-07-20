@@ -1,0 +1,26 @@
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--blue);
+  font-family: var(--heading-font);
+  font-size: clamp(2.3rem, 5vw, 4.25rem);
+  line-height: 1;
+}
+
+.section-header p {
+  max-width: 640px;
+  margin: 1rem auto 0;
+  color: var(--muted-blue);
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  line-height: 1.45;
+}
+
+.section-header--light h2,
+.section-header--light p {
+  color: var(--white);
+}

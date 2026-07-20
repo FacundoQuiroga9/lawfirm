@@ -1,16 +1,31 @@
 import './Hero.css';
+import { firm, heroContent } from '../../data/siteContent';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section" aria-labelledby="hero-title">
       <div className="hero-container">
         <div className="hero-text-container">
-          <h1 className="hero-title">Your Legal Shield in Texas</h1>
-          <p className="hero-tagline">Tailored legal solutions for your unique case.</p>
-          <a href="tel:+14697820166" className="hero-btn">CALL ME</a>
+          <h1 id="hero-title" className="hero-title" aria-label={heroContent.title}>
+            {heroContent.titleLines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
+          </h1>
+          <p className="hero-tagline">{heroContent.tagline}</p>
+          <a href={firm.phoneHref} className="hero-btn">{heroContent.ctaLabel}</a>
         </div>
         <div className="hero-img-container">
-          <img src="/images/mark2.png" alt="Lawyer" className="hero-img" />
+          <picture>
+            <source srcSet={heroContent.image.webp} type="image/webp" />
+            <img
+              src={heroContent.image.fallback}
+              alt={heroContent.image.alt}
+              className="hero-img"
+              width={heroContent.image.width}
+              height={heroContent.image.height}
+              fetchPriority="high"
+            />
+          </picture>
         </div>
       </div>
     </section>

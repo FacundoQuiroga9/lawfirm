@@ -1,31 +1,33 @@
-body, html {
-  background: rgb(4,16,41);
-  background: linear-gradient(270deg, rgba(4,16,41,1) 0%, rgba(0,45,139,1) 100%);
-  min-height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+main {
+  background: var(--navy);
 }
 
-.hero,
+.section-pad {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+#home,
 #services,
 #about,
 #contact {
-  width: 100%;
-  min-height: 100vh; /* Ocupa al menos la altura de la ventana */
-  background-color: inherit; /* Hereda el color de fondo del body */
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
 }
 
-#services{
-  background-color: white;
-  padding: 100px 0; /* Ajusta el padding según tus necesidades */
-  color: #022C89;
+#services {
+  background: var(--surface);
+  color: var(--blue);
 }
 
-#contact{
-  background-image: url(/images/office.jpg);
-  background-size: cover; /* Hace que la imagen cubra toda la sección */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-
+#contact {
+  position: relative;
+  z-index: 0;
+  background-image:
+    linear-gradient(90deg, rgba(247, 249, 252, 0.93), rgba(247, 249, 252, 0.74)),
+    image-set(
+      url("/images/office.webp") type("image/webp"),
+      url("/images/office.jpg") type("image/jpeg")
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

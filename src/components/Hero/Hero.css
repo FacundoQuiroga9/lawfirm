@@ -1,131 +1,132 @@
-/* Base styles */
 .hero-section {
-  min-height: calc(100vh - 88px);
+  color: white;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(176, 141, 87, 0.16), transparent 28rem),
+    linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
 }
-.hero-container{
-  padding-top: 4rem;
-}
-.hero-text-container {
-  max-width: 80%;
-  text-align: center;
+
+.hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  width: min(1120px, calc(100% - clamp(2rem, 6vw, 4rem)));
+  min-height: clamp(560px, calc(88svh - var(--nav-height)), 760px);
   margin: 0 auto;
+  padding-block: clamp(3rem, 7vw, 5rem) 0;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.hero-text-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 690px;
   z-index: 1;
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 2.2rem;
-  font-family: "Archivo Black", sans-serif;
-  margin-bottom: 2rem;
-  color: white;
+  margin-inline: auto;
+  color: var(--white);
+  font-family: var(--heading-font);
+  font-size: clamp(1.85rem, 7.2vw, 2.65rem);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.hero-title span {
+  display: block;
 }
 
 .hero-tagline {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: white;
+  max-width: min(100%, 26ch);
+  margin: 1.25rem auto 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  line-height: 1.45;
 }
 
 .hero-btn {
-  display: inline;
-  background-color: transparent;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  max-width: min(100%, 280px);
+  margin-top: 2rem;
+  padding: 0.85rem 1.2rem;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  color: var(--blue);
   font-weight: bold;
-  border: 3px solid white;
-  font-size: 1.5rem;
-  padding: 10px 20px;
+  font-size: 0.95rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .hero-btn:hover {
-  background-color: white;
-  color: #022C89;
-  transition: background-color 0.3s ease;
+  background-color: transparent;
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 .hero-img-container {
-  margin-top: 4rem;
+  align-self: end;
+  width: min(82vw, 440px);
+  margin-inline: auto;
 }
 
+.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.24));
+}
 
-/* Pantallas medianas (tablets) */
+@media (min-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+  }
+
+  .hero-tagline {
+    max-width: min(100%, 34ch);
+  }
+}
+
 @media (min-width: 768px) {
-  .hero-container{
-    padding-top: 6rem;
+  .hero-container {
+    grid-template-columns: minmax(0, 0.92fr) minmax(260px, 0.72fr);
+    padding-top: clamp(2rem, 5vw, 4rem);
   }
+
+  .hero-text-container {
+    text-align: left;
+  }
+
   .hero-title {
-    font-size: 3rem;
+    margin-inline: 0;
+    font-size: clamp(4rem, 8vw, 5.8rem);
+  }
+
+  .hero-title span {
+    white-space: nowrap;
   }
 
   .hero-tagline {
-    font-size: 1.5rem;
+    margin-inline: 0;
+    font-size: clamp(1.05rem, 2.4vw, 1.65rem);
   }
-
-  .hero-btn {
-    font-size: 2rem;
-  }
-
 
   .hero-img-container {
-    margin-top: 4rem;
+    width: min(38vw, 440px);
   }
-  .hero-img{
-    width: 0%;
-    margin: 0 auto;
-  }
-
 }
 
-/* Pantallas grandes (desktops) */
 @media (min-width: 992px) {
-  .hero-container{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 2rem;
-  }
-  .hero-text-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 50%;
-  }
-  .hero-title {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-
-  .hero-tagline {
-    font-size: 1.2rem;
-    text-align: left;
-  }
-
-  .hero-btn {
-    font-size: 1.5rem;
-    align-self: flex-start;
+  .hero-container {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.78fr);
   }
 
   .hero-img-container {
-    margin-top: 4rem;
-  }
-  .hero-img{
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-/* Pantallas extra grandes */
-@media (min-width: 1200px) {
-  .hero-title {
-    font-size: 5rem;
-  }
-
-  .hero-tagline {
-    font-size: 2.5rem;
-  }
-
-  .hero-img {
-    max-width: 700px;
+    width: min(40vw, 520px);
   }
 }

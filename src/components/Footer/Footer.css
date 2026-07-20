@@ -1,10 +1,19 @@
-.footer{
+.footer {
+  border-top: 1px solid var(--border);
   background-color: white !important;
-  color: #022C89;
+  color: var(--muted-blue);
 }
 
-.fq-link{
+.footer p {
+  font-size: 0.95rem;
+}
+
+.fq-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   font-weight: bold;
-  text-decoration: none;
-  color:#022C89;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }

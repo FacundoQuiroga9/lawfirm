@@ -1,77 +1,126 @@
-
 .custom-navbar {
-  color: #041029 !important;
   position: sticky !important;
   top: 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.451);
   z-index: 9990;
+  min-height: var(--nav-height);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(4, 16, 41, 0.12);
 }
 
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
-  font-size: 1.2rem;
-  color: #022C89;
-  font-family: "Poppins", sans-serif !important;
+  color: var(--blue);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 700;
   text-align: center;
 }
 
+.custom-navbar .navbar-brand {
+  max-width: calc(100% - 4.75rem);
+}
+
+.custom-navbar .nav-link {
+  border-radius: 4px;
+  padding: 0.55rem 0.8rem !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--navy);
+}
+
+.custom-navbar .navbar-toggler {
+  margin-left: auto;
+  border: 1px solid rgba(4, 16, 41, 0.22);
+  border-radius: 4px;
+  padding: 0.55rem 0.65rem;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  width: 1.35em;
+  height: 1.35em;
+}
 
 .flag-icon {
-  margin-left: 1rem;
-  height: 50px;
+  align-self: center;
   width: auto;
-  box-shadow: 1px 1px 1px 0.5px black;
+  height: 34px;
+  border: 1px solid rgba(4, 16, 41, 0.16);
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(4, 16, 41, 0.16);
 }
 
 .logotipo {
-  width: 10rem;
+  width: clamp(8rem, 16vw, 10.5rem);
+  height: auto;
 }
 
 .navbar-nav-center {
-  display: flex;
-  justify-content: center;
   flex-grow: 1;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
-.number-button{
+.navbar-actions {
+  align-items: center;
+  gap: 1rem;
+}
+
+.number-button {
   align-self: center !important;
-  background-color: #022C89 !important;
-  border: 3px solid #022C89 !important;
+  min-height: 44px;
+  background-color: var(--blue) !important;
+  border: 2px solid var(--blue) !important;
+  border-radius: 4px;
   color: white !important;
+  padding-inline: 1rem !important;
 }
 
-.number-button:hover{
+.number-button:hover {
   background-color: transparent !important;
-  color: #022C89 !important;
+  color: var(--blue) !important;
 }
 
 @media (max-width: 992px) {
-  .flag-icon {
-    margin-left: 0;
-    height: auto;
-    width: 80px;
-    align-self: center;
+  .custom-navbar {
+    --nav-height: 76px;
   }
 
-  .number-button{
-    align-self: flex-start !important;
-    margin: 1rem 0;
-    padding: 1rem 1rem !important;
+  .custom-navbar .container {
+    position: relative;
   }
-  .navbar-menu{
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  .custom-navbar .navbar-toggler {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
   }
+
+  .navbar-menu {
+    gap: 1rem;
+    padding: 1rem 0 0.5rem;
+  }
+
+  .navbar-nav-center,
+  .navbar-actions {
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .number-button {
+    align-self: stretch !important;
+  }
+
   .custom-navbar .navbar-brand,
-.custom-navbar .nav-link {
-  font-size: 1.5rem;
-}
+  .custom-navbar .nav-link {
+    font-size: 1.05rem;
+    text-align: left;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .logotipo {
-    width: 8rem;
+    width: 7.5rem;
   }
 }

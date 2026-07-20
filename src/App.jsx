@@ -4,17 +4,21 @@ import ServicesSection from './components/ServicesSection/ServicesSection';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import StructuredData from './components/SEO/StructuredData';
 import './App.css'
 
 function App() {
 
   return (
     <>
+      <StructuredData />
       <NavigationBar />
-      <Hero />
-      <ServicesSection />
-      <About />
-      <Contact />
+      <main>
+        <Hero />
+        <ServicesSection />
+        <About />
+        <Contact />
+      </main>
       <Footer />
     </>
   )
