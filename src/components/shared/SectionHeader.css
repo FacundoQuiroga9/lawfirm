@@ -8,7 +8,7 @@
 }
 
 .section-header h2 {
-  color: var(--navy);
+  color: var(--text-primary);
   font-family: var(--heading-font);
   font-size: var(--heading-lg);
   letter-spacing: -0.025em;
@@ -19,7 +19,7 @@
 .section-header__subtitle {
   max-width: 40rem;
   margin-top: 1rem;
-  color: var(--body-muted);
+  color: var(--text-muted);
   font-size: var(--text-lg);
   line-height: 1.6;
 }
@@ -38,9 +38,9 @@
 }
 
 .section-header--light h2 {
-  color: var(--pure-white);
+  color: var(--text-on-dark);
 }
 
 .section-header--light .section-header__subtitle {
-  color: rgba(255, 255, 255, 0.74);
+  color: var(--text-on-dark-secondary);
 }

@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 1.5rem;
-  color: var(--blue);
+  color: var(--text-primary);
   font-weight: 700;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
@@ -10,5 +10,5 @@
 }
 
 .contact-link:hover {
-  color: var(--navy);
+  color: var(--gray-dark);
 }

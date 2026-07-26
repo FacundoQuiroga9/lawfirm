@@ -15,14 +15,19 @@ const AboutSection = () => {
           <div className="about-image">
             <span className="about-image-frame" aria-hidden="true" />
             <picture>
-              <source srcSet={aboutContent.image.webp} type="image/webp" />
+              <source
+                srcSet={aboutContent.image.srcSet}
+                sizes={aboutContent.image.sizes}
+                type="image/webp"
+              />
               <img
-                src={aboutContent.image.fallback}
+                src={aboutContent.image.src}
                 className="about-img"
                 alt={aboutContent.image.alt}
                 width={aboutContent.image.width}
                 height={aboutContent.image.height}
                 loading="lazy"
+                decoding="async"
               />
             </picture>
           </div>

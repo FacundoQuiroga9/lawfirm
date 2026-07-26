@@ -69,11 +69,21 @@ const Contact = () => {
             </a>
           </address>
 
-          <div className="contact-map" aria-label={`${firm.name} office map`}>
+          <div className="contact-map">
             <div className="contact-map__label">
               <span>Office location</span>
               <strong>Plano, Texas</strong>
             </div>
+            <a
+              className="contact-map__external"
+              href={firm.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${firm.address.label} in Google Maps`}
+            >
+              <span>Open in Google Maps</span>
+              <Icon name="arrow" size={17} className="button-arrow" />
+            </a>
             <Map />
           </div>
         </div>

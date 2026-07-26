@@ -10,7 +10,7 @@ const StructuredData = () => {
       name: firm.attorneyName,
     },
     url: firm.url,
-    logo: firm.logo,
+    logo: new URL(firm.logo, firm.url).toString(),
     email: firm.email,
     telephone: firm.phone,
     address: {

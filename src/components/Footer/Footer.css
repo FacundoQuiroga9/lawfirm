@@ -1,8 +1,8 @@
 .footer {
   background:
-    radial-gradient(circle at 12% 20%, rgba(11, 60, 168, 0.16), transparent 18rem),
-    var(--navy);
-  color: rgba(255, 255, 255, 0.72);
+    radial-gradient(circle at 12% 20%, rgb(var(--white-rgb) / 0.045), transparent 18rem),
+    var(--background-dark);
+  color: var(--text-on-dark-secondary);
 }
 
 .footer-main {
@@ -19,12 +19,12 @@
   min-height: var(--tap-target);
   align-items: center;
   border-radius: var(--radius-sm);
+  color: var(--text-on-dark);
 }
 
 .footer-logo {
   width: clamp(8.5rem, 14vw, 10rem);
-  height: auto;
-  filter: brightness(0) invert(1);
+  aspect-ratio: 340 / 171;
 }
 
 .footer-nav {
@@ -39,7 +39,7 @@
   display: inline-flex;
   align-items: center;
   min-height: var(--tap-target);
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-on-dark-secondary);
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
@@ -47,7 +47,7 @@
 
 .footer-nav a:hover,
 .footer-phone:hover {
-  color: var(--gold-soft);
+  color: var(--text-on-dark);
 }
 
 .footer-phone {
@@ -57,7 +57,7 @@
 }
 
 .footer-legal {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border-on-dark);
 }
 
 .footer-legal__inner {
@@ -69,7 +69,7 @@
 }
 
 .footer-legal p {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-on-dark-muted);
   font-size: 0.67rem;
   line-height: 1.5;
 }
@@ -78,13 +78,13 @@
   display: inline-flex;
   align-items: center;
   min-height: 1.5rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--text-on-dark-secondary);
   font-weight: 700;
   text-underline-offset: 0.18em;
 }
 
 .bondicode-link:hover {
-  color: var(--gold-soft);
+  color: var(--text-on-dark);
 }
 
 @media (max-width: 799px) {

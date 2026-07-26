@@ -1,23 +1,23 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import { firm } from '../../data/siteContent';
 import './Map.css';
 
 const Map = () => {
-  const position = [firm.location.lat, firm.location.lng];
+  const query = new URLSearchParams({
+    q: firm.address.label,
+    z: '15',
+    output: 'embed',
+  });
+  const embedUrl = `https://maps.google.com/maps?${query.toString()}`;
 
   return (
-    <MapContainer center={position} zoom={13} className="office-map" scrollWheelZoom={false}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={position}>
-        <Popup>
-          {firm.address.label}
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <iframe
+      className="office-map"
+      src={embedUrl}
+      title="Google Maps location for Marc J. Fratter Attorney at Law"
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="strict-origin-when-cross-origin"
+    />
   );
 };
 

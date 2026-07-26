@@ -9,13 +9,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="site-shell footer-main">
         <a className="footer-brand" href="#home" aria-label={`${firm.name} home`}>
-          <img
-            src={firm.brandLogo}
-            alt={firm.name}
-            className="footer-logo"
-            width="749"
-            height="365"
-            loading="lazy"
+          <span
+            className="footer-logo brand-mark"
+            aria-hidden="true"
+            style={{ '--brand-logo-url': `url("${firm.brandLogo}")` }}
           />
         </a>
 

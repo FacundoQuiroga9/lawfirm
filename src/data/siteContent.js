@@ -6,8 +6,8 @@ export const firm = {
   phoneHref: 'tel:+14697820166',
   emailHref: 'mailto:legal@marcjfratter.com',
   url: 'https://marcjfratter.com/',
-  logo: '/logo.png',
-  brandLogo: '/images/logotipo vertical.png',
+  logo: '/images/marc-j-fratter-logo.svg',
+  brandLogo: '/images/marc-j-fratter-logo.svg',
   address: {
     label: '101 E Park Blvd Suite 355, Plano, TX 75074',
     streetAddress: '101 E Park Blvd Suite 355',
@@ -21,6 +21,8 @@ export const firm = {
     lat: 33.02979785440171,
     lng: -96.70612097483566,
   },
+  googleMapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=101%20E%20Park%20Blvd%20Suite%20355%2C%20Plano%2C%20TX%2075074',
 };
 
 export const navigationLinks = [
@@ -53,11 +55,14 @@ export const heroContent = {
     },
   ],
   image: {
-    webp: '/images/mark2-1100.webp',
-    fallback: '/images/mark2.png',
-    alt: 'Marc J. Fratter, Texas attorney',
+    src: '/images/marc-hero-1100.webp',
+    srcSet:
+      '/images/marc-hero-480.webp 480w, /images/marc-hero-720.webp 720w, /images/marc-hero-1100.webp 1100w',
+    sizes:
+      '(max-width: 540px) min(72vw, 15.25rem), (max-width: 767px) min(72vw, 18rem), (max-width: 1100px) 36vw, 34rem',
+    alt: 'Marc J. Fratter, attorney at law.',
     width: 1100,
-    height: 1310,
+    height: 1711,
   },
 };
 
@@ -94,7 +99,7 @@ export const practiceAreas = [
   },
   {
     title: 'Civil Law',
-    icon: '/images/civil.png',
+    icon: '/images/civil-icon.png',
     iconAlt: '',
     services: [
       'Contract Disputes',
@@ -109,11 +114,14 @@ export const practiceAreas = [
 export const aboutContent = {
   heading: 'About Me',
   image: {
-    webp: '/images/mark1-1100.webp',
-    fallback: '/images/mark1.png',
-    alt: 'Marc J. Fratter standing in a blue suit',
+    src: '/images/marc-about-1100.webp',
+    srcSet:
+      '/images/marc-about-600.webp 600w, /images/marc-about-720.webp 720w, /images/marc-about-1100.webp 1100w',
+    sizes:
+      '(max-width: 540px) min(calc(100vw - 2rem), 21rem), (max-width: 959px) min(88vw, 22rem), min(35vw, 31rem)',
+    alt: 'Marc J. Fratter.',
     width: 1100,
-    height: 1030,
+    height: 1939,
   },
   paragraphs: [
     "Marc J. Fratter is one of Texas's preeminent criminal defense lawyers, renowned for his relentless dedication to his clients. Marc is a graduate of the Texas A&M School of Law and has been practicing civil law, criminal defense, and family law in the state of Texas for over 20 years.",
@@ -128,4 +136,14 @@ export const contactContent = {
     { label: 'Contact', values: [firm.email, firm.phone] },
     { label: 'Open Hours', values: firm.hours },
   ],
+};
+
+export const reviewContent = {
+  eyebrow: 'Client Experience',
+  heading: 'Trusted counsel when it matters most.',
+  quote:
+    "Marc is the best attorney I've ever hired. His strategy and guidance helped me achieve the best possible outcome.",
+  reviewer: 'Chris V.',
+  source: 'Google Review',
+  rating: 5,
 };

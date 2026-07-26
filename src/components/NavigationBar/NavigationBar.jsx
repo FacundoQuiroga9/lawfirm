@@ -140,12 +140,10 @@ const NavigationBar = () => {
           aria-label={`${firm.name} home`}
           onClick={() => handleNavigation('#home')}
         >
-          <img
-            src={firm.brandLogo}
-            alt={firm.name}
-            className="brand-logo"
-            width="749"
-            height="365"
+          <span
+            className="brand-logo brand-mark"
+            aria-hidden="true"
+            style={{ '--brand-logo-url': `url("${firm.brandLogo}")` }}
           />
         </a>
 

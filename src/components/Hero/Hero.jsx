@@ -2,6 +2,8 @@ import { firm, heroContent } from '../../data/siteContent';
 import Icon from '../shared/Icon';
 import './Hero.css';
 
+const heroImagePriorityProps = { fetchpriority: 'high' };
+
 const Hero = () => {
   return (
     <section id="home" className="hero-section viewport-section" aria-labelledby="hero-title">
@@ -47,13 +49,20 @@ const Hero = () => {
         <div className="hero-portrait">
           <span className="hero-portrait-ring" aria-hidden="true" />
           <picture>
-            <source srcSet={heroContent.image.webp} type="image/webp" />
+            <source
+              srcSet={heroContent.image.srcSet}
+              sizes={heroContent.image.sizes}
+              type="image/webp"
+            />
             <img
-              src={heroContent.image.fallback}
+              src={heroContent.image.src}
               alt={heroContent.image.alt}
               className="hero-img"
               width={heroContent.image.width}
               height={heroContent.image.height}
+              loading="eager"
+              decoding="async"
+              {...heroImagePriorityProps}
             />
           </picture>
         </div>
