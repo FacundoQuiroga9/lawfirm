@@ -24,6 +24,7 @@ export const firm = {
 };
 
 export const navigationLinks = [
+  { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
@@ -31,9 +32,26 @@ export const navigationLinks = [
 
 export const heroContent = {
   title: 'Your Legal Shield in Texas',
-  titleLines: ['Your Legal', 'Shield in', 'Texas'],
+  titleLines: ['Your Legal', 'Shield in Texas'],
   tagline: 'Tailored legal solutions for your unique case.',
   ctaLabel: 'Call for a Consultation',
+  trustItems: [
+    {
+      icon: 'shield',
+      title: '20+ years',
+      description: 'Practicing in Texas',
+    },
+    {
+      icon: 'texas',
+      title: 'Texas licensed',
+      description: 'Serving clients statewide',
+    },
+    {
+      icon: 'scales',
+      title: 'Civil, criminal & family',
+      description: 'Established practice areas',
+    },
+  ],
   image: {
     webp: '/images/mark2-1100.webp',
     fallback: '/images/mark2.png',
@@ -91,11 +109,11 @@ export const practiceAreas = [
 export const aboutContent = {
   heading: 'About Me',
   image: {
-    webp: '/images/mark1-about-cropped.webp',
-    fallback: '/images/mark1-about-cropped.png',
+    webp: '/images/mark1-1100.webp',
+    fallback: '/images/mark1.png',
     alt: 'Marc J. Fratter standing in a blue suit',
-    width: 1200,
-    height: 1345,
+    width: 1100,
+    height: 1030,
   },
   paragraphs: [
     "Marc J. Fratter is one of Texas's preeminent criminal defense lawyers, renowned for his relentless dedication to his clients. Marc is a graduate of the Texas A&M School of Law and has been practicing civil law, criminal defense, and family law in the state of Texas for over 20 years.",

@@ -1,8 +1,7 @@
 .contact-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 44px;
+  min-height: 1.5rem;
   color: var(--blue);
   font-weight: 700;
   text-decoration: underline;

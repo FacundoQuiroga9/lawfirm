@@ -1,20 +1,51 @@
-import './Hero.css';
 import { firm, heroContent } from '../../data/siteContent';
+import Icon from '../shared/Icon';
+import './Hero.css';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero-section" aria-labelledby="hero-title">
-      <div className="hero-container">
-        <div className="hero-text-container">
+    <section id="home" className="hero-section viewport-section" aria-labelledby="hero-title">
+      <div className="hero-courthouse" aria-hidden="true" />
+
+      <div className="site-shell site-shell--wide hero-container">
+        <div className="hero-copy">
+          <p className="hero-kicker">Marc J. Fratter · Attorney at Law</p>
+
           <h1 id="hero-title" className="hero-title" aria-label={heroContent.title}>
             {heroContent.titleLines.map((line) => (
               <span key={line}>{line}</span>
             ))}
           </h1>
+
+          <span className="hero-accent" aria-hidden="true" />
           <p className="hero-tagline">{heroContent.tagline}</p>
-          <a href={firm.phoneHref} className="hero-btn">{heroContent.ctaLabel}</a>
+
+          <a
+            href={firm.phoneHref}
+            className="hero-btn"
+            aria-label={`${heroContent.ctaLabel}: ${firm.phone}`}
+          >
+            <span>{heroContent.ctaLabel}</span>
+            <Icon name="arrow" size={19} className="button-arrow" />
+          </a>
+
+          <ul className="hero-trust-list" aria-label="Professional credentials">
+            {heroContent.trustItems.map((item) => (
+              <li key={item.title} className="hero-trust-item">
+                <span className="hero-trust-icon">
+                  <Icon name={item.icon} size={23} />
+                </span>
+                <span>
+                  <strong>{item.title}</strong>
+                  <small>{item.description}</small>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="hero-img-container">
+
+        <div className="hero-portrait">
+          <span className="hero-portrait-ring" aria-hidden="true" />
           <picture>
             <source srcSet={heroContent.image.webp} type="image/webp" />
             <img
@@ -23,7 +54,6 @@ const Hero = () => {
               className="hero-img"
               width={heroContent.image.width}
               height={heroContent.image.height}
-              fetchPriority="high"
             />
           </picture>
         </div>
