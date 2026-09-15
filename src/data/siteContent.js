@@ -1,3 +1,5 @@
+import { googleReviewCollection, verifiedFiveStarReviews } from './googleReviews.js';
+
 export const firm = {
   name: 'Marc J. Fratter Law',
   attorneyName: 'Marc J. Fratter',
@@ -141,9 +143,9 @@ export const contactContent = {
 export const reviewContent = {
   eyebrow: 'Client Experience',
   heading: 'Trusted counsel when it matters most.',
-  quote:
-    "Marc is the best attorney I've ever hired. His strategy and guidance helped me achieve the best possible outcome.",
-  reviewer: 'Chris V.',
-  source: 'Google Review',
-  rating: 5,
+  emptyHeading: 'Reviews on Google',
+  emptyText: 'Read what clients have shared about working with Marc.',
+  emptyCtaLabel: 'Read reviews on Google',
+  collection: googleReviewCollection,
+  reviews: verifiedFiveStarReviews(googleReviewCollection),
 };

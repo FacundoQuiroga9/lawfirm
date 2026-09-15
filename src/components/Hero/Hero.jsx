@@ -15,7 +15,9 @@ const Hero = () => {
 
           <h1 id="hero-title" className="hero-title" aria-label={heroContent.title}>
             {heroContent.titleLines.map((line) => (
-              <span key={line}>{line}</span>
+              <span className="hero-title-line" key={line}>
+                <span className="hero-title-line-inner">{line}</span>
+              </span>
             ))}
           </h1>
 

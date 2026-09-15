@@ -25,7 +25,9 @@
   grid-template-columns: minmax(17rem, 0.78fr) minmax(0, 1.22fr);
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
-  overflow: hidden;
+  /* Clip the decorative ring without creating an internal scroll container.
+     Focusing a review link must not scroll the panel and hide its heading. */
+  overflow: clip;
   padding: clamp(2rem, 5vw, 4.25rem);
   border: 1px solid var(--border-on-dark);
   border-radius: var(--radius-lg);
@@ -85,9 +87,10 @@
 }
 
 .review-card {
+  --review-padding: clamp(1.5rem, 4vw, 2.5rem);
   position: relative;
   z-index: 1;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding: var(--review-padding);
   border: 1px solid var(--border-on-dark);
   border-radius: var(--radius-md);
   background: rgb(var(--white-rgb) / 0.055);
@@ -105,7 +108,8 @@
   margin: 1.15rem 0 0;
 }
 
-.review-card blockquote p {
+.review-card blockquote p,
+.review-measure-text {
   color: var(--text-on-dark);
   font-size: clamp(1.15rem, 2.3vw, 1.55rem);
   font-weight: 500;
@@ -150,6 +154,141 @@
   }
 
   .review-card {
-    padding: 1.25rem;
+    --review-padding: 1.25rem;
   }
+}
+
+.review-carousel {
+  min-width: 0;
+}
+
+.review-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.review-control {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-target);
+  height: var(--tap-target);
+  padding: 0;
+  border: 1px solid var(--border-on-dark);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-on-dark-secondary);
+  cursor: pointer;
+}
+
+.review-control:hover,
+.review-control:focus-visible {
+  background: rgb(var(--white-rgb) / 0.08);
+  color: var(--text-on-dark);
+}
+
+.review-control:disabled,
+.review-control[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.review-counter {
+  flex: 1;
+  padding-inline: 0.4rem;
+  color: var(--text-on-dark-muted);
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.review-arrow-back {
+  transform: rotate(180deg);
+}
+
+.review-stage {
+  display: grid;
+  min-width: 0;
+  touch-action: pan-y pinch-zoom;
+}
+
+.review-slide {
+  grid-area: 1 / 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.review-slide--outgoing {
+  pointer-events: none;
+}
+
+.review-quote-slot {
+  min-block-size: var(--review-text-height, 0px);
+  margin-top: 1.15rem;
+}
+
+.review-card .review-quote-slot blockquote {
+  margin: 0;
+}
+
+.review-card blockquote p,
+.review-measure-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.review-slide figcaption {
+  min-block-size: var(--review-caption-height, 0px);
+  align-content: start;
+  overflow-wrap: anywhere;
+}
+
+.review-card .review-source {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
+  align-items: baseline;
+}
+
+.review-source a {
+  text-underline-offset: 0.2em;
+}
+
+.review-source a:hover {
+  color: var(--text-on-dark);
+}
+
+.review-measure {
+  position: absolute;
+  top: 0;
+  inset-inline: var(--review-padding);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.review-empty-title {
+  margin-bottom: 0.75rem;
+  color: var(--text-on-dark);
+  font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+  font-weight: 500;
+}
+
+.review-empty > p + p {
+  color: var(--text-on-dark-secondary);
+  font-size: var(--text-sm);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
